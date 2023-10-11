@@ -1,0 +1,11 @@
+Date: 11 Oct 2023
+Title: Execution Context and Call Stack
+
+Notes:
+
+- While executing the global execution context, if function is encountered.
+JS creates its own new functional execution context. In browser context, if code is executing in strict mode,
+the value of this is undefined, else it is window object in function execution context/
+
+Call Stack or Execution Context Stack (ECS) LIFO Data structure to store all execution stacks created during life cycle of script.
+

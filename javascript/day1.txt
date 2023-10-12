@@ -9,3 +9,4 @@ the value of this is undefined, else it is window object in function execution c
 
 Call Stack or Execution Context Stack (ECS) LIFO Data structure to store all execution stacks created during life cycle of script.
 
+- 

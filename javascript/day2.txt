@@ -1,0 +1,35 @@
+Date: 12 Oct 2023
+Topic:
+- Hoisting
+- Temporal Dead Zone
+- ReferenceError and other types of errors
+
+
+- Hoisting is the concept by which, variables or functions are accessible even before they are initilised.
+This works for variables defined as const or let.
+For 'var' the value is set as undefined.
+
+- The time taken between variable declaration and initialisation is reffered to as temporal dead zone. Inside TDZ attempt to access variable will result in referrence error. The variable is initialised when the code reaches to the place where it is declared. 
+
+- The term temporal is used, since the zone depends upon the order of execution not necessarily the position in the file, since the variable may be used inside a function decalaration, then variable is initialised, then function is called.
+In this case no error since the order of exection of function happens after initialisation even though it appears before in position.
+
+switch(x){
+    case 0: let foo; break;
+    case 1: let foo; break;
+}
+This will result in Syntax error saying foo is already initialised.
+But if we wrap them in block, no error since let is block scoped.
+
+switch(x){
+    {case 0: let foo; break;}
+    {case 1: let foo; break;}
+}
+andd.....viola...no error
+
+-Variables declared by let have their scope in the block for which they are declared, as well as in any contained sub-blocks. In this way, let works very much like var. The main difference is that the scope of a var variable is the entire enclosing function:
+
+- Types of error:
+ 1. Synta error-> if you try to declare variable twice.
+ 2. ReferenceError-> If you try to call a variable before initialisation.
+ 3. TypeError -> When u try to change const variable.

@@ -1,0 +1,27 @@
+Title: Lexical scoping and scopes
+Date: 13 Oct 2023
+
+- When javascript engine create a new exectution context for a function, it creates a new lexical environment to store variables defined in that function during the execution phase.
+- A lexical environment is a data structure that hold an identifier-variable apping.
+- Lexical env contains 2 components:
+1. Environmental record: place where variable and function declarations are stored. 
+2. Reference to the outer environment- It means access to its outer lexical env.
+
+
+-What are block and scope in js
+Block : Its a collection of statement in js enclosed within braces {} . It is also called compound statement
+
+-Why are block statement required ?
+let and const declarations are scoped to the containing block. This allows you to hide data from the global scope without wrapping it in a function. It helps in abstraction
+
+-All in All
+var is function scope.
+let and const are block scope.
+Function scope is within the function.
+Block scope is within curly brackets.
+
+-Function Scope: When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function.
+
+-Block Scope: A variable when declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop. To be consise the variables declared inside the curly braces are called as within block scope.
+
+-A block statement is used to group zero or more statements. The block is delimited by a pair of braces ("curly braces") and contains a list of zero or more statements and declarations.
